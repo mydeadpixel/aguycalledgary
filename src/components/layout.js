@@ -5,7 +5,6 @@ import { StaticQuery, graphql } from "gatsby"
 import { HelmetDatoCms } from 'gatsby-source-datocms'
 
 import '../styles/index.sass'
-import 'https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Source+Sans+Pro:300,400,700&display=swap'
 
 const TemplateWrapper = ({ children }) => (
   <StaticQuery query={graphql`
@@ -92,6 +91,8 @@ const TemplateWrapper = ({ children }) => (
         {children}
       </div>
     </div>
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Source+Sans+Pro:300,400,700&display=swap" rel="stylesheet">
+
     )}
   />
 )
