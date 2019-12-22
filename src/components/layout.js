@@ -90,11 +90,7 @@ const TemplateWrapper = ({ children }) => (
         </div>
         {children}
       </div>
-    </div>
-    <style>
-    @import url('https://fonts.googleapis.com/css?family=Playfair+Display:400,700|Source+Sans+Pro:300,400,700&display=swap');
-    </style>
-    
+    </div>    
     )}
   />
 )
