@@ -9,12 +9,9 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
     {
-      resolve: `gatsby-source-datocms`,
+      resolve: `gatsby-source-datocms`,`gatsby-plugin-prefetch-google-fonts`,
       options: {
         apiToken: process.env.DATO_API_TOKEN,
-      },
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
-      options: {
         fonts: [
           {
             family: `Oswald`,
