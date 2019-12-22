@@ -9,20 +9,20 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-transformer-remark`,
     {
-      resolve: `gatsby-source-datocms`,`gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-source-datocms`,
       options: {
         apiToken: process.env.DATO_API_TOKEN,
-        fonts: [
-          {
-            family: `Oswald`,
-            subsets: [`latin`],
-          },
-          {
-            family: `Open Sans`,
-            variants: [`400`, `700`]
-          },
-        ],
       },
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [
+          `limelight`,
+          `source sans pro\:300,400,400i,700` // you can also specify font weights and styles
+        ],
+        display: 'swap'
+      }
     },
   ],
 }
