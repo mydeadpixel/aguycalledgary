@@ -15,19 +15,12 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
-        fonts: [
-          {
-            family: `Oswald`,
-            subsets: [`300`, `600`],
-          },
-          {
-            family: `Playfair Display`,
-            variants: [`400`, `700`]
-          },
-        ],
-      },
+        google: {
+          families: ['Droid Sans', 'Droid Serif']
+        }
+      }
     },
   ],
 }
