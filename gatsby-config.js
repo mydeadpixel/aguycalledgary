@@ -15,7 +15,7 @@ module.exports = {
       },
     },
     {
-      resolve: `google-fonts-plugin`,
+      resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
         fonts: [
           {
