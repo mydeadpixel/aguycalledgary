@@ -12,7 +12,7 @@
     "gatsby-source-datocms": "^2.1.18",
     "gatsby-source-filesystem": "^2.1.29",
     "gatsby-transformer-remark": "^2.6.27",
-    "google-fonts-plugin": "^5.0.2",
+    "gatsby-plugin-prefetch-google-fonts": "^5.0.2",
     "node-sass": "^4.11.0",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",
