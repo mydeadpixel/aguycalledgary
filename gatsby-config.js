@@ -23,7 +23,7 @@ module.exports = {
             subsets: [`latin`],
           },
           {
-            family: `Open Sans`,
+            family: `Playfair Display`,
             variants: [`400`, `700`]
           },
         ],
