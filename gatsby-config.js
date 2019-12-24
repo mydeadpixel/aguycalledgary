@@ -20,10 +20,10 @@ module.exports = {
         fonts: [
           {
             family: `Oswald`,
-            subsets: [`300`, `600`],
+            subsets: [`latin`],
           },
           {
-            family: `Playfair Display`,
+            family: `Open Sans`,
             variants: [`400`, `700`]
           },
         ],
