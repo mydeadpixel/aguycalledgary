@@ -49,7 +49,7 @@ const TemplateWrapper = ({ children }) => (
       <div className="container__sidebar">
         <div className="sidebar">
           <h6 className="sidebar__title">
-            <Img fluid={home.logo.fluid} />
+            <Img {data.datoCmsHome.logo.fluid} />
           </h6>
           <div
             className="sidebar__intro"
