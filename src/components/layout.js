@@ -27,12 +27,6 @@ const TemplateWrapper = ({ children }) => (
         }
         copyright
       }
-      home: datoCmsHome {
-        logo {
-          fluid(maxWidth: 450, imgixParams: { fm: "svg", auto: "compress" }) {
-            ...GatsbyDatoCmsSizes
-        }
-      }
       allDatoCmsSocialProfile(sort: { fields: [position], order: ASC }) {
         edges {
           node {
@@ -52,7 +46,6 @@ const TemplateWrapper = ({ children }) => (
       <div className="container__sidebar">
         <div className="sidebar">
           <h6 className="sidebar__title">
-            <Img fluid={home.logo.fluid} />
           </h6>
           <div
             className="sidebar__intro"
