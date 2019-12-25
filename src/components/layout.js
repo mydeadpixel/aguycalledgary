@@ -19,9 +19,12 @@ const TemplateWrapper = ({ children }) => (
         seoMetaTags {
           ...GatsbyDatoCmsSeoMetaTags
         }
-        logo {
-          fluid(maxWidth: 450, imgixParams: { fm: "png", auto: "compress" }) {
-            ...GatsbyDatoCmsSizes
+        edges { 
+          node {       
+            logo {
+              fluid(maxWidth: 450, imgixParams: { fm: "svg", auto: "compress" }) {
+                ...GatsbyDatoCmsSizes
+            }
           }
         }
         introTextNode {
@@ -50,7 +53,9 @@ const TemplateWrapper = ({ children }) => (
       <div className="container__sidebar">
         <div className="sidebar">
           <h6 className="sidebar__title">
+            {data.datoCmsHome.edges.map(({ node: home }) => (
             <Img fluid={home.logo.fluid} />
+            ))}
           </h6>
           <div
             className="sidebar__intro"
@@ -86,7 +91,7 @@ const TemplateWrapper = ({ children }) => (
               <Link to="#" data-js="toggleSidebar" />
             </div>
             <div className="mobile-header__logo">
-              <Img fluid={home.logo.fluid} />
+              test
             </div>
           </div>
         </div>
