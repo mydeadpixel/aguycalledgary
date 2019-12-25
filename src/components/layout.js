@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import { StaticQuery, graphql } from "gatsby"
 import { HelmetDatoCms } from 'gatsby-source-datocms'
-import Img from 'gatsby-image'
 import '../styles/index.sass'
 
 const TemplateWrapper = ({ children }) => (
@@ -18,11 +17,6 @@ const TemplateWrapper = ({ children }) => (
       datoCmsHome {
         seoMetaTags {
           ...GatsbyDatoCmsSeoMetaTags
-        }
-        logo {
-          fluid(maxWidth: 600, imgixParams: { fm: "svg", auto: "compress" }) {
-            ...GatsbyDatoCmsSizes
-          }
         }
         introTextNode {
           childMarkdownRemark {
@@ -50,7 +44,7 @@ const TemplateWrapper = ({ children }) => (
       <div className="container__sidebar">
         <div className="sidebar">
           <h6 className="sidebar__title">
-            <Img fluid={home.logo.fluid} />
+            
           </h6>
           <div
             className="sidebar__intro"
