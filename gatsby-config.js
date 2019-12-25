@@ -19,8 +19,8 @@ module.exports = {
       options: {
         fonts: [
           {
-            family: `Oswald`,
-            subsets: [`latin`],
+            family: `Montserrat`,
+            variants: [`400`, `700`],
           },
           {
             family: `Playfair Display`,
