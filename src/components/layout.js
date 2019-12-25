@@ -11,9 +11,6 @@ const TemplateWrapper = ({ children }) => (
     query LayoutQuery
     {
       datoCmsSite {
-        globalSeo {
-          siteName
-        }
         faviconMetaTags {
           ...GatsbyDatoCmsFaviconMetaTags
         }
@@ -21,6 +18,11 @@ const TemplateWrapper = ({ children }) => (
       datoCmsHome {
         seoMetaTags {
           ...GatsbyDatoCmsSeoMetaTags
+        }
+        logo {
+          fluid(maxWidth: 450, imgixParams: { fm: "png", auto: "compress" }) {
+            ...GatsbyDatoCmsSizes
+          }
         }
         introTextNode {
           childMarkdownRemark {
@@ -48,7 +50,7 @@ const TemplateWrapper = ({ children }) => (
       <div className="container__sidebar">
         <div className="sidebar">
           <h6 className="sidebar__title">
-            <Link to="/">{data.datoCmsSite.globalSeo.siteName}</Link>
+            <Img fluid={home.logo.fluid} />
           </h6>
           <div
             className="sidebar__intro"
@@ -84,7 +86,7 @@ const TemplateWrapper = ({ children }) => (
               <Link to="#" data-js="toggleSidebar" />
             </div>
             <div className="mobile-header__logo">
-              <Link to="/">{data.datoCmsSite.globalSeo.siteName}</Link>
+              <Img fluid={home.logo.fluid} />
             </div>
           </div>
         </div>
