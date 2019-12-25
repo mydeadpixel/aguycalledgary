@@ -19,7 +19,7 @@ const TemplateWrapper = ({ children }) => (
         seoMetaTags {
           ...GatsbyDatoCmsSeoMetaTags
         }
-        edges { 
+        edges2 { 
           node {       
             logo {
               fluid(maxWidth: 450, imgixParams: { fm: "svg", auto: "compress" }) {
@@ -53,7 +53,7 @@ const TemplateWrapper = ({ children }) => (
       <div className="container__sidebar">
         <div className="sidebar">
           <h6 className="sidebar__title">
-            {data.datoCmsHome.edges.map(({ node: home }) => (
+            {data.datoCmsHome.edges2.map(({ node: logo }) => (
             <Img fluid={home.logo.fluid} />
             ))}
           </h6>
